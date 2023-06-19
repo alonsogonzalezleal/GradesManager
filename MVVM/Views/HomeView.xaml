@@ -51,8 +51,14 @@
                 Grid.Row="1"
                 Grid.ColumnSpan="5"
                 HorizontalOptions="Center"
-                FontSize="50"
-                ></Label>
+                FontSize="50"></Label>
+
+            <Label Text="Grade Manager es una aplicación que te ayuda a calcular la calificación de una materia en específico o a saber que calificación necesitas para pasar con 6 o 10."
+                   Grid.Row="2"
+                   Grid.ColumnSpan="5"
+                   HorizontalOptions="Center"
+                   FontSize="Body"
+                   Margin="50"></Label>
 
         </Grid>
     </ScrollView>
