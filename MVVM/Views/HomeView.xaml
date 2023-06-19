@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradesManager.MVVM.Views.HomeView"
+             Title="Home">
+
+    <ContentPage.Resources>
+        <Color x:Key="SelectionColor">#000</Color>
+        <Color x:Key="LightFont">#f1f1f1f1</Color>
+        <Color x:Key="DarkFont">#222</Color>
+        <Color x:Key="PlaceholderColor">#999</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush
+                EndPoint="1,1">
+                    <GradientStop Offset="0.10" Color="#47033E"/>
+                    <GradientStop Offset="0.25" Color="#051639"/>
+                    <GradientStop Offset="0.50" Color="#042444"/>
+                    <GradientStop Offset="0.95" Color="#044166"/>
+
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".33*"></RowDefinition>
+                <RowDefinition Height=".33*"></RowDefinition>
+                <RowDefinition Height=".33*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+                <ColumnDefinition Width=".2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Grid.Column="2"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="StartAndExpand"
+                Source="university_logo.png"
+                WidthRequest="500"></Image>
+
+            <Label
+                Text="¡Bienvenido!"
+                Grid.Row="1"
+                Grid.ColumnSpan="5"
+                HorizontalOptions="Center"
+                FontSize="50"
+                ></Label>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

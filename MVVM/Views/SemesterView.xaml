@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradesManager.MVVM.Views.SemesterView"
+             Title="SemesterView">
+    <VerticalStackLayout>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".1*"></RowDefinition>
+                <RowDefinition Height=".1*"></RowDefinition>
+                <RowDefinition Height=".1*"></RowDefinition>
+                <RowDefinition Height=".1*"></RowDefinition>
+                <RowDefinition Height=".1*"></RowDefinition>
+                <RowDefinition Height=".1*"></RowDefinition>
+                <RowDefinition Height=".1*"></RowDefinition>
+                <RowDefinition Height=".1*"></RowDefinition>
+                <RowDefinition Height=".1*"></RowDefinition>
+                <RowDefinition Height=".1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".33*"></ColumnDefinition>
+                <ColumnDefinition Width=".33*"></ColumnDefinition>
+                <ColumnDefinition Width=".33*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Materia"
+                   VerticalOptions="Center"
+                   Grid.Row="0"
+                   Grid.Column="0">
+            </Label>
+            <Entry  Text="{Binding Semester.Name}"
+                    Placeholder="Nombre"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                   Margin="5">
+            </Entry>
+
+            <Label Text="Valor %"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   HorizontalOptions="Center"></Label>
+
+            <Label Text="Calificación"
+                   Grid.Column="2"
+                   Grid.Row="1"
+                   HorizontalOptions="Center"></Label>
+
+            <Label Text="Primer parcial"
+                   VerticalOptions="Center"
+                   Grid.Row="2" Grid.Column="0"></Label>
+            <Entry Text="{Binding Semester.Item1.Value}"
+                   Placeholder="Valor %"
+                   Keyboard="Numeric"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Margin="5">
+            </Entry>
+            <Entry Text="{Binding Semester.Item1.Grade}"
+                   Placeholder="Calificación (escala 1 a 10)"
+                   Keyboard="Numeric"
+                   Grid.Row="2"
+                   Grid.Column="2"
+                   Margin="5">
+            </Entry>
+
+            <Label Text="Segundo parcial"
+                   VerticalOptions="Center"
+                   Grid.Row="3" Grid.Column="0"></Label>
+            <Entry Text="{Binding Semester.Item2.Value}"
+                   Placeholder="Valor %"
+                   Keyboard="Numeric"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   Margin="5">
+            </Entry>
+            <Entry Text="{Binding Semester.Item2.Grade}"
+                   Placeholder="Calificación (escala 1 a 10)"
+                   Keyboard="Numeric"
+                   Grid.Row="3"
+                   Grid.Column="2"
+                   Margin="5">
+            </Entry>
+
+            <Label Text="Tercer parcial"
+                   VerticalOptions="Center"
+                   Grid.Row="4" Grid.Column="0"></Label>
+            <Entry Text="{Binding Semester.Item3.Value}"
+                   Placeholder="Valor %"
+                   Keyboard="Numeric"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   Margin="5">
+            </Entry>
+
+            <Button Text="Calcular"
+                    Margin="0,30,0,0"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="1"
+                    Command="{Binding ClickCalculate}"></Button>
+
+            <Label Text="Calificación para:"
+                   Grid.Row="6"
+                   Grid.ColumnSpan="3"
+                   HorizontalOptions="Center"
+                   Margin="0,30,0,0"
+                   FontSize="25">
+            </Label>
+
+            <Grid  Grid.Row="7"
+                   Grid.ColumnSpan="3"
+                   HorizontalOptions="Center"
+                   Margin="0,30,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="Obtener 6"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       Margin="10"></Label>
+                <Label Text="Obtener 10"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       Margin="10"></Label>
+
+                <Label Text="{Binding ToGetSix}"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       HorizontalOptions="Center"></Label>
+                <Label Text="{Binding ToGetTen}"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       HorizontalOptions="Center"></Label>
+
+            </Grid>
+
+            <Label Text="{Binding Message}"
+                   Grid.Row="8"
+                   Grid.ColumnSpan="3"
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   Margin="0,30,0,0"></Label>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
